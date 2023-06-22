@@ -1,0 +1,73 @@
+.event-form {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-form h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.event-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.event-form input[type="text"],
+.event-form input[type="date"],
+.event-form input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eaeaea;
+  color: #333;
+}
+
+.event-form input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 5px;
+}
+
+.event-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f7d154;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-form ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-form li {
+  margin-bottom: 10px;
+  background-color: #c4e1e8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-form li div {
+  margin-bottom: 5px;
+}
+
+.event-form p {
+  margin-top: 10px;
+  color: #888;
+}
