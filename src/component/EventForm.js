@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./EventForm.css";
+
 const EventForm = () => {
   const [eventName, setEventName] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [recurringDays, setRecurringDays] = useState([]);
-
   const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    // Check if there are stored events in localStorage
+    const storedEvents = localStorage.getItem("events");
+    if (storedEvents) {
+      setEvents(JSON.parse(storedEvents));
+    }
+  }, []);
 
   const handleEventNameChange = (e) => {
     setEventName(e.target.value);
@@ -48,7 +56,11 @@ const EventForm = () => {
       recurringDays,
     };
 
+
+
     setEvents([...events, newEvent]);
+    localStorage.setItem("events", JSON.stringify([...events, newEvent]));
+    
 
     // Clear the form fields
     setEventName("");
